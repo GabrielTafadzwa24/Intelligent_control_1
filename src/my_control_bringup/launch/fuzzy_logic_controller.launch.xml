@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="intelligent_control" exec="fuzzy_logic_controller" />
+
+    <node pkg="mavros" exec="mavros_node" output="screen">
+        <param name="fcu_url" value="udp://:14540@localhost:14557" />
+    </node>
+</launch>
